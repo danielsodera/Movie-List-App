@@ -26,3 +26,17 @@
   margin-bottom: 10px;
 
 }
+
+.search-bar-container {
+  position: absolute;
+  top: 150px;
+  left: 42%;
+}
+
+.search-bar-container input{
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  font-size: 25px;
+  
+}
