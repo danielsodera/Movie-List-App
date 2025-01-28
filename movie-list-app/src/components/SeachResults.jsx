@@ -9,7 +9,6 @@ export default function SearchResults({movies}) {
 
 
     return (
-        <div className="search-results-container">
             <ul>
                 {movies.map((movie) => <li key={movie.id}><img src={`${imageUrl}${movie.poster_path}`}></img>
                 <div className="button-container">
@@ -17,10 +16,5 @@ export default function SearchResults({movies}) {
                 <SeenButton />
                 </div></li>)}
             </ul>
-
-
-
-
-        </div>
     )
 }

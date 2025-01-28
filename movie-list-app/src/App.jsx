@@ -33,8 +33,14 @@ function App() {
       .catch(err => console.error(err));
     }, [searchTerm])
     
-    console.log(movies)
-      //this is happening constantly 
+    /* Next steps
+    - Add a section for watchlist 
+    - Add a section for seen
+    - handleAddToWatchlist()
+    - handleAddToSeen()
+    - handleRemoveFromWatchlist()
+    - handleRemoveFromSeen()
+    */
 
 
   return (
@@ -43,9 +49,17 @@ function App() {
       <h1>Movie List</h1>
       <h2>Add movies to your watchlist and tracked the ones you have watched!</h2>
       </header>
-    <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
-    <SearchResults movies={movies}/> 
 
+      <div className="search-bar-container">
+      <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
+      </div>
+
+    <div className="search-results-container">
+    <SearchResults movies={movies}/> 
+    </div>
+
+    <div className='watchlist-container'>
+    </div>
     </>
   )
 }

@@ -5,7 +5,5 @@ export default function SeenButton(){
 
     return (
             <button className="seen-button">Seen!</button>
-
-       
     )
 }
