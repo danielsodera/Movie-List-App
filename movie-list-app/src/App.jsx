@@ -11,7 +11,7 @@ function App() {
   
    //Search state
   const [searchTerm, setSearchTerm] = useState("Batman");
-  const [movieImages, setMovieImages] = useState([])
+  const [movies, setMovies] = useState([])
 
     function handleSearch(e){
     setSearchTerm(e.target.value)
@@ -29,11 +29,11 @@ function App() {
       fetch(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&include_adult=false&language=en-US&page=1`, options)
       .then(res => res.json())
       .then(res => {
-        return setMovieImages(res.results[0].poster_path)}) //right now this only get's one image, I want to render them all to the screen
+        return setMovies(res.results)})
       .catch(err => console.error(err));
     }, [searchTerm])
     
-    console.log(movieImages)
+    console.log(movies)
       //this is happening constantly 
 
 
@@ -44,7 +44,7 @@ function App() {
       <h2>Add movies to your watchlist and tracked the ones you have watched!</h2>
       </header>
     <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />
-    <SearchResults image={movieImages}/> 
+    <SearchResults movies={movies}/> 
 
     </>
   )

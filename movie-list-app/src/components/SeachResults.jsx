@@ -1,11 +1,16 @@
-import React from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 
-export default function SearchResults({movieImages}) {
+export default function SearchResults({movies}) {
+
+    const imageUrl = 'https://image.tmdb.org/t/p/w200'
+   
 
 
     return (
         <div className="search-results-container">
-            <img src={movieImages} />
+            <ul>
+                {movies.map((movie) => <li key={movie.id}><img src={`${imageUrl}${movie.poster_path}`}></img></li>)}
+            </ul>
 
 
 
