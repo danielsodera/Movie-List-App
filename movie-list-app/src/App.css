@@ -54,10 +54,22 @@
 
 }
 
+.button-container{
+  display: flex;
+  height: 60px;
+}
+
 .watchlist-button {
   position: relative;
   background-color: red;
-  display: flex;
+  width: 90px;
+  font-size: 18px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.seen-button{
+  background-color: green;
   width: 90px;
   font-size: 18px;
   margin: 5px;
