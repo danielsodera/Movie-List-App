@@ -29,7 +29,7 @@ function App() {
       fetch(`https://api.themoviedb.org/3/search/movie?query=${searchTerm}&include_adult=false&language=en-US&page=1`, options)
       .then(res => res.json())
       .then(res => {
-        return setMovieImages(res.results[0].poster_path)})
+        return setMovieImages(res.results[0].poster_path)}) //right now this only get's one image, I want to render them all to the screen
       .catch(err => console.error(err));
     }, [searchTerm])
     
