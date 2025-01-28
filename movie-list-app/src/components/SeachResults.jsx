@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
+import WatchlistButton from './WatchlistButton';
 
 export default function SearchResults({movies}) {
 
@@ -9,7 +10,8 @@ export default function SearchResults({movies}) {
     return (
         <div className="search-results-container">
             <ul>
-                {movies.map((movie) => <li key={movie.id}><img src={`${imageUrl}${movie.poster_path}`}></img></li>)}
+                {movies.map((movie) => <li key={movie.id}><img src={`${imageUrl}${movie.poster_path}`}></img>
+                <WatchlistButton /></li>)}
             </ul>
 
 
