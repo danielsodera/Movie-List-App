@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function SeenButton(){
+export default function SeenButton({onClick}){
 
 
     return (
-            <button className="seen-button">Seen!</button>
+            <button className="seen-button" onClick={onClick} >Seen!</button>
     )
 }

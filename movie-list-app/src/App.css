@@ -82,15 +82,16 @@
 .watchlist-button {
   position: relative;
   background-color: red;
-  width: 90px;
+  width: 100%;
   font-size: 18px;
   margin: 5px;
   padding: 3px;
 }
 
 .seen-button {
+  position: relative;
   background-color: green;
-  width: 90px;
+  width: 100%;
   font-size: 18px;
   margin: 5px;
   padding: 3px;
@@ -99,4 +100,14 @@
 .watchlist-container {
   background-color: rgb(45, 45, 82);
   min-height: 300px;
+}
+
+.watchList-array-container{
+
+ display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%; /* Ensures the list spans full width */
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
 }

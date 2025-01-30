@@ -6,6 +6,6 @@ export default function WatchlistButton({onClick}){
 
     return (
 
-            <button className="watchlist-button" onClick={onClick}>Watchlist</button>
+            <button className="watchlist-button" onClick={onClick}>Add to Watchlist</button>
     )
 }
