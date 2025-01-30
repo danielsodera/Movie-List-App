@@ -1,15 +1,23 @@
-.header-container{
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  text-align: center;
-  border: 5px solid white;
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(2, 10, 54);
+.outer-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes up the full height */
+  width: 100%; /* Full width */
 }
 
-.header-container h1{
+.header-container {
+  position: relative; /* No need for absolute positioning */
+  top: 0;
+  width: 100vw; /* Full width of the viewport */
+  text-align: left;
+  border: 5px solid white;
+  padding: 5px;
+  background-color: rgb(2, 10, 54);
+  box-sizing: border-box; /* Include padding/border in width */
+}
+
+.header-container h1 {
   color: yellow;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
@@ -18,43 +26,55 @@
   margin-top: 10px;
 }
 
-.header-container h2{
+.header-container h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   padding-top: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
-
 }
 
 .search-bar-container {
-  position: absolute;
-  top: 12%;
-  left: 42%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Add spacing */
+  width: 100%; /* Full width */
 }
 
-.search-bar-container input{
+.search-bar-container input {
   height: 50px;
   width: 300px;
   text-align: center;
   font-size: 25px;
-  
 }
 
 .search-results-container {
-  height: 600px;
-    max-width: 100%;
+  position: relative;
+  width: 100%; /* Full width of the page */
+  min-height: 300px; /* Prevent collapsing when there are no results */
+  margin-top: 20px;
+  display: flex; /* Flex layout for better alignment */
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  padding: 10px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
-.search-results-container li{
-  display: inline-block;
+.search-results-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: 1px 1px;
-  padding: 1px 1px;
-
+  width: 100%; /* Ensures the list spans full width */
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+  
 }
 
-.button-container{
+
+
+.button-container {
   display: flex;
   height: 60px;
 }
@@ -68,10 +88,15 @@
   padding: 3px;
 }
 
-.seen-button{
+.seen-button {
   background-color: green;
   width: 90px;
   font-size: 18px;
   margin: 5px;
   padding: 3px;
+}
+
+.watchlist-container {
+  background-color: rgb(45, 45, 82);
+  min-height: 300px;
 }

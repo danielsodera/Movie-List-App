@@ -34,7 +34,6 @@ function App() {
     }, [searchTerm])
     
     /* Next steps
-    - Add a section for watchlist 
     - Add a section for seen
     - handleAddToWatchlist()
     - handleAddToSeen()
@@ -44,7 +43,7 @@ function App() {
 
 
   return (
-    <>
+    <div className="outer-container">
     <header className="header-container">
       <h1>Movie List</h1>
       <h2>Add movies to your watchlist and tracked the ones you have seen!</h2>
@@ -59,8 +58,9 @@ function App() {
     </div>
 
     <div className='watchlist-container'>
+      <h2>Watchlist</h2>
     </div>
-    </>
+    </div>
   )
 }
 
