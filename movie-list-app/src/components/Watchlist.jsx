@@ -12,9 +12,9 @@ export default function Watchlist({watchlist, handleRemoveFromWatchlist}){
 
     return (
         <div className='watchList-array-container'>
-            {watchlist.map((movie) => <li key={movie.id}><img src={`${imageUrl}${movie.poster_path}`} />
+            {watchlist.map((movie, index) => <li key={index}><img src={`${imageUrl}${movie.poster_path}`} />
             <div className='button-container'>
-             <SeenButton onClick={() => handleRemoveFromWatchlist(movie)}/> </div>
+             <SeenButton onClick={() => handleRemoveFromWatchlist(index)}/> </div>
              </li>)}
             </div>
            

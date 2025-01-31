@@ -36,19 +36,17 @@ function App() {
     }, [searchTerm])
 
     function handleAddToWatchlist(movie){
-        setWatchlist((prev) => [...prev, movie])
-        console.log(watchlist)
+        
+        if (!Array.prototype.includes.call(watchlist, movie)){
+          setWatchlist((prev) => [...prev, movie])
+          console.log(watchlist)
+        }
+       
     }
 
-    function handleRemoveFromWatchlist(movie){
-      console.log("working!")
+    function handleRemoveFromWatchlist(index){
+        setWatchlist((prev) => prev.filter((_, i) => i !== index))
     }
-
-    
-    /* Next steps
-    - add functionality to handleRemoveFromWatchlist()
-    - prevent user from duplicating adding to watchlist 
-    */
 
 
   return (
