@@ -3,10 +3,9 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SeachResults';
 import Watchlist from './components/Watchlist';
-const tmdbKey = '2add80205a34117439e456a51c8b07f2';
-const tmdbBaseUrl ='https://api.themoviedb.org/3'
-const tmdbReadAccessToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYWRkODAyMDVhMzQxMTc0MzllNDU2YTUxYzhiMDdmMiIsIm5iZiI6MTczNTc1OTEyMS41NDgsInN1YiI6IjY3NzU5NTExNDExMTU5OWUzODEyZTc0YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uRqRrmRzXCuMosrX13p3urdQ_P-Efpnw0nmhOATtZl0'
-
+const tmdbKey = "key-here"';
+const tmdbBaseUrl ='https://api.themoviedb.org/3';
+const tmdbReadAccessToken = "access-token-here";
 function App() {
 
   
